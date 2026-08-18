@@ -1,0 +1,104 @@
+/* ==========================================================================
+   DEVELOPER TERMINAL CLI STYLES
+   ========================================================================== */
+
+.terminal-card {
+  background: #05070e;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(99, 102, 241, 0.15);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.terminal-header {
+  background: #0b0f19;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot-ctrl {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.terminal-title-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.terminal-body {
+  padding: 20px;
+  min-height: 340px;
+  max-height: 480px;
+  overflow-y: auto;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.terminal-output {
+  color: #e2e8f0;
+}
+
+.terminal-line {
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.terminal-line.cmd-echo {
+  color: var(--accent-secondary);
+}
+
+.terminal-line.success {
+  color: #34d399;
+}
+
+.terminal-line.info {
+  color: #60a5fa;
+}
+
+.terminal-line.warning {
+  color: #fbbf24;
+}
+
+.terminal-line.error {
+  color: #f87171;
+}
+
+.terminal-prompt-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.terminal-prompt-lbl {
+  color: #34d399;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #f8fafc;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  width: 100%;
+  outline: none;
+}

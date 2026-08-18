@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit Kumar | B.Tech CSE • Data Analytics • IoT & Software Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Official personal portfolio of Amit Kumar. B.Tech CSE student at Vision Institute of Technology (AKTU), graduating in 2027. Specializing in Data Analytics (Python, SQL, Power BI, Pandas), Web Development, and IoT Embedded Systems (ESP8266, Arduino).">
+  <meta name="keywords" content="Amit Kumar, Data Analytics, Python, SQL, Power BI, Pandas, IoT, ESP8266, Arduino, Web Developer, AKTU, Vision Institute of Technology, HackGear 2.0 Winner, IIT Mandi">
+  <meta name="author" content="Amit Kumar">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Social Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amit Kumar | Developer & Data Analytics Portfolio">
+  <meta property="og:description" content="Explore Amit Kumar's portfolio, interactive IoT simulators, AI mock interview platform, and data projects.">
+  <meta property="og:image" content="assets/images/amit_photo.jpg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/simulators.css">
+  <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+
+  <!-- Interactive Canvas, Confetti & Ambient Glow Elements -->
+  <canvas id="particles-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="bg-ambient-glow glow-1"></div>
+  <div class="bg-ambient-glow glow-2"></div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-badge">AK</div>
+        <span>Amit<span style="color: var(--accent-secondary);">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#playground" class="nav-link">Playground</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Interactive Theme Accent Picker -->
+        <div class="theme-picker-group" title="Switch Theme Glow Color">
+          <span class="theme-dot dot-indigo active" data-theme="indigo" title="Cyber Indigo"></span>
+          <span class="theme-dot dot-emerald" data-theme="emerald" title="Matrix Emerald"></span>
+          <span class="theme-dot dot-cyan" data-theme="cyan" title="Neon Cyan"></span>
+          <span class="theme-dot dot-amber" data-theme="amber" title="Solar Amber"></span>
+          <span class="theme-dot dot-crimson" data-theme="crimson" title="Crimson Red"></span>
+        </div>
+
+        <!-- Sound FX Button -->
+        <button id="btn-toggle-sound" class="sound-toggle-btn" title="Toggle Futuristic SFX">🔇 Sound Off</button>
+
+        <a href="assets/resume/Amit_Kumar_Resume.pdf" download="Amit_Kumar_Resume.pdf" class="btn btn-primary btn-sm">
+          <span>📄 Download CV</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span>Open to Data Analytics & Developer Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <br><span class="gradient-text">Amit Kumar</span>
+        </h1>
+
+        <div class="hero-typewriter">
+          <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+        </div>
+
+        <p class="hero-bio">
+          Final-year B.Tech Computer Science student at <strong>Vision Institute of Technology (AKTU, Class of 2027)</strong> with a strong foundation in <strong>Data Analytics</strong> and <strong>Frontend Web Development</strong>. Proficient in Python, SQL, Power BI, Excel, Pandas, JavaScript (ES6+), and React.js. Certified Data Annotator by <strong>IIT Mandi & iHub HCI Foundation</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary btn-lg">🚀 Explore Projects</a>
+          <a href="#playground" class="btn btn-secondary btn-lg">🎮 Live Simulators</a>
+          <a href="#contact" class="btn btn-outline btn-lg">📬 Get In Touch</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/Amitydv2007" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/amit-kumar-479211332" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:amitk55575@gmail.com" class="social-icon-btn" title="Send Email">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+          </a>
+          <a href="https://wa.me/917817034503" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp Chat">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Avatar Visual with Amit's Real Photo & 3D Tilt -->
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-glow-ring"></div>
+          <div class="avatar-frame">
+            <img src="assets/images/amit_photo.jpg" alt="Amit Kumar" class="avatar-img" id="hero-avatar-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="container stats-bar-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">3rd</div>
+        <div class="stat-label">National HackGear 2.0</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Data, Web & IoT Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">IIT Mandi</div>
+        <div class="stat-label">Data Annotation Certified</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2027</div>
+        <div class="stat-label">B.Tech CSE (AKTU)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About & Education Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">⚡ Background & Academic Journey</span>
+        <h2 class="section-title">About <span class="gradient-text">Amit Kumar</span></h2>
+        <p class="section-subtitle">Blending quantitative data analysis with practical software engineering and embedded IoT hardware.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Left: Bio Card with Photo Integration -->
+        <div class="about-card about-narrative">
+          <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+            <img src="assets/images/amit_photo.jpg?v=3" alt="Amit Kumar" style="width: 80px; height: 80px; border-radius: 20px; object-fit: cover; border: 2px solid var(--accent-primary); box-shadow: 0 0 15px rgba(99,102,241,0.3);" />
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 4px;">Amit Kumar</h3>
+              <p style="font-size: 0.88rem; color: var(--accent-secondary); font-family: var(--font-mono); margin: 0;">B.Tech CSE • Vision Institute of Technology (AKTU, Class of 2027)</p>
+            </div>
+          </div>
+
+          <p>
+            Final-year <strong>Computer Science and Engineering</strong> student at <strong>Vision Institute of Technology</strong> (AKTU, Class of 2027) with a strong foundation in <strong>Data Analytics</strong> and <strong>Frontend Web Development</strong>.
+          </p>
+          <p>
+            Proficient in <strong>Python, SQL, Power BI, Excel, Pandas, JavaScript (ES6+), and React.js</strong>. Passionate about translating complex datasets into actionable business insights, building intuitive, responsive user interfaces, and solving real-world challenges through technology.
+          </p>
+          <p>
+            Additionally, completed the specialized <strong>Data Annotator Course & Practical Training</strong> at <strong>IIT Mandi & iHub HCI Foundation</strong>, solidifying core expertise in AI data preparation pipelines and dataset quality inspection.
+          </p>
+
+          <div class="info-cards-grid">
+            <div class="info-mini-card">
+              <div class="info-icon">📍</div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-val">Vill-Amarpur, Sambhal (UP)</div>
+              </div>
+            </div>
+            <div class="info-mini-card">
+              <div class="info-icon">🎓</div>
+              <div>
+                <div class="info-label">Degree</div>
+                <div class="info-val">B.Tech CSE (2023–27)</div>
+              </div>
+            </div>
+            <div class="info-mini-card">
+              <div class="info-icon">🌐</div>
+              <div>
+                <div class="info-label">Languages</div>
+                <div class="info-val">Hindi (Native), English</div>
+              </div>
+            </div>
+            <div class="info-mini-card">
+              <div class="info-icon">💼</div>
+              <div>
+                <div class="info-label">Availability</div>
+                <div class="info-val">Full-time / Internships</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Education Timeline Card -->
+        <div class="about-card">
+          <h3 class="timeline-card-title">
+            <span>🎓</span> Academic Milestones
+          </h3>
+
+          <div class="timeline">
+            <!-- College -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-period">2023 – 2027 (Expected)</div>
+              <div class="timeline-degree">Bachelor of Technology (Computer Science & Engineering)</div>
+              <div class="timeline-institution">Vision Institute of Technology | Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+              <p class="timeline-desc">Specializing in Data Analytics, Database Management Systems, Data Structures & Algorithms, Object-Oriented Programming, and practical IoT lab projects.</p>
+            </div>
+
+            <!-- Intermediate -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-period">2022 – 2023</div>
+              <div class="timeline-degree">Senior Secondary (Intermediate - PCM)</div>
+              <div class="timeline-institution">Kendriya Vidya Niketan, Sihavali (CBSE)</div>
+              <p class="timeline-desc">Focused on Physics, Chemistry, and Mathematics; developed strong analytical reasoning and quantitative foundations.</p>
+            </div>
+
+            <!-- High School -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-period">2020 – 2021</div>
+              <div class="timeline-degree">High School (Secondary Education)</div>
+              <div class="timeline-institution">DP Vidya Peeth, Dhanari, Sambhal (CBSE)</div>
+              <p class="timeline-desc">Completed secondary coursework in science, mathematics, and computer fundamentals.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">🛠️ Technical Arsenal</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Capabilities</span></h2>
+        <p class="section-subtitle">A comprehensive toolkit spanning data analytics, modern web development, and hardware IoT engineering.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="data">Data Analytics</button>
+        <button class="filter-btn" data-filter="web">Web & Programming</button>
+        <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+        <button class="filter-btn" data-filter="tools">Tools & Methods</button>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid">
+        
+        <!-- Python -->
+        <div class="skill-card" data-category="data">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #38bdf8;">🐍</div>
+            <div class="skill-info">
+              <h4>Python</h4>
+              <span class="skill-category-tag">DATA & SCRIPTING</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Automation</span>
+          </div>
+        </div>
+
+        <!-- SQL & Databases -->
+        <div class="skill-card" data-category="data">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #60a5fa;">🗄️</div>
+            <div class="skill-info">
+              <h4>SQL & Relational DBs</h4>
+              <span class="skill-category-tag">DATA QUERYING</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Joins</span>
+            <span class="skill-tag">Aggregation</span>
+            <span class="skill-tag">Subqueries</span>
+          </div>
+        </div>
+
+        <!-- Power BI & Excel -->
+        <div class="skill-card" data-category="data">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #f59e0b;">📊</div>
+            <div class="skill-info">
+              <h4>Power BI & Excel</h4>
+              <span class="skill-category-tag">BUSINESS INTELLIGENCE</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 82%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Dashboards</span>
+            <span class="skill-tag">Power Query</span>
+            <span class="skill-tag">DAX Formulas</span>
+            <span class="skill-tag">KPI Visuals</span>
+          </div>
+        </div>
+
+        <!-- JavaScript & React -->
+        <div class="skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #fbbf24;">⚡</div>
+            <div class="skill-info">
+              <h4>JavaScript & React</h4>
+              <span class="skill-category-tag">FRONTEND DEVELOPMENT</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">ES6+</span>
+            <span class="skill-tag">React.js (Basics)</span>
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- IoT & ESP8266 -->
+        <div class="skill-card" data-category="iot">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #10b981;">📡</div>
+            <div class="skill-info">
+              <h4>Arduino & ESP8266</h4>
+              <span class="skill-category-tag">EMBEDDED SYSTEMS</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 86%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">Sensors & Relays</span>
+            <span class="skill-tag">WiFi Microcontrollers</span>
+            <span class="skill-tag">ATL Lab</span>
+          </div>
+        </div>
+
+        <!-- Tools & Annotations -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap" style="color: #a855f7;">⚙️</div>
+            <div class="skill-info">
+              <h4>Tools & Annotation</h4>
+              <span class="skill-category-tag">DEV WORKFLOW</span>
+            </div>
+          </div>
+          <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">IIT Mandi Annotation</span>
+            <span class="skill-tag">UI Testing</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">💼 Professional Experience</span>
+        <h2 class="section-title">Work & <span class="gradient-text">Internships</span></h2>
+        <p class="section-subtitle">Real-world technical problem solving and hands-on analytical workflows.</p>
+      </div>
+
+      <div class="experience-list">
+        
+        <!-- Experience 1: HexaSoftware -->
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role-title">Data Analytics Intern</h3>
+              <div class="exp-company">HexaSoftware</div>
+            </div>
+            <div class="exp-badge-duration">Data Analytics Division</div>
+          </div>
+          <ul class="exp-points">
+            <li>Gained practical exposure to end-to-end data analytics workflows and analytical problem solving on real datasets.</li>
+            <li>Conducted data extraction, transformation, cleaning, and reporting tasks utilizing Python and SQL.</li>
+            <li>Strengthened foundational skills in Python (Pandas, NumPy), Excel modeling, and Power BI dashboard visualization.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">SQL</span>
+            <span class="tech-chip">Excel</span>
+            <span class="tech-chip">Power BI</span>
+            <span class="tech-chip">Data Cleaning</span>
+          </div>
+        </div>
+
+        <!-- Experience 2: Computer Net World -->
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role-title">Technical Support Engineer</h3>
+              <div class="exp-company">Computer Net World</div>
+            </div>
+            <div class="exp-badge-duration">Technical Operations</div>
+          </div>
+          <ul class="exp-points">
+            <li>Provided direct technical support and assistance for computer-related hardware, networking, and software troubleshooting.</li>
+            <li>Diagnosed complex operating system, software configuration, and peripheral device anomalies with fast resolution times.</li>
+            <li>Developed structured troubleshooting workflows, clear client communication, and rigorous technical problem-solving capabilities.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tech-chip">Hardware Diagnostics</span>
+            <span class="tech-chip">Troubleshooting</span>
+            <span class="tech-chip">Network Configuration</span>
+            <span class="tech-chip">Client Support</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">🚀 Innovation & Code</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Explore physical IoT hardware builds, automated vehicle safety concepts, and intelligent web applications.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: SafeSphere (NEW) -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/safesphere.jpg" alt="SafeSphere Safety Monitoring Platform" class="project-img" />
+            <span class="project-badge-top">Web Application • Safety Monitoring</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SafeSphere — Smart Safety Monitoring Platform</h3>
+            <p class="project-description">
+              Developed SafeSphere, a comprehensive platform designed to provide smart safety monitoring and real-time alerts. Integrated responsive UI components with backend APIs for threat/alert logging and secure data communication.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">React.js</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">REST APIs</span>
+              <span class="tech-chip">Threat Logging</span>
+              <span class="tech-chip">UI Testing</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">🛡️ Try Threat Radar</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="safesphere">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Resume Maker (NEW) -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/ai_resume_maker.jpg" alt="AI Resume Maker Application" class="project-img" />
+            <span class="project-badge-top">AI & Web Application • ATS Engine</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AI Resume Maker — ATS Resume Generator</h3>
+            <p class="project-description">
+              Built an intelligent resume generation platform that dynamically crafts tailored, ATS-friendly resumes based on user inputs. Implemented real-time preview and export capabilities using structured prompt workflows.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">React.js</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Prompt Workflows</span>
+              <span class="tech-chip">ATS Scoring</span>
+              <span class="tech-chip">PDF Export</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">📄 Try Resume Builder</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="ai-resume">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Smart Home Automation -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/smart_home.jpg" alt="Smart Home Automation System" class="project-img" />
+            <span class="project-badge-top">IoT Physical Project • District Award</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Smart Home Automation System</h3>
+            <p class="project-description">
+              Developed an IoT system to control appliances remotely using Arduino/ESP8266 and sensors; submitted and verified at the ATL Lab; awarded a District-Level Certificate for technical innovation.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">Arduino</span>
+              <span class="tech-chip">ESP8266</span>
+              <span class="tech-chip">Embedded C</span>
+              <span class="tech-chip">Sensor Interfacing</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">🎮 Live IoT Simulator</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="smart-home">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: AI Interview System -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/ai_interview.jpg" alt="AI Interview System" class="project-img" />
+            <span class="project-badge-top">Web Platform • AI Mock Interview</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AI Interview System</h3>
+            <p class="project-description">
+              Created a web-based mock interview platform using HTML, CSS, and JavaScript to simulate interview practice scenarios with voice readouts and dynamic question domains.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">HTML5 / CSS3</span>
+              <span class="tech-chip">REST APIs</span>
+              <span class="tech-chip">Speech API</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">🤖 Try Interview Demo</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="ai-interview">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Smart Wiper Car System -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/smart_wiper.jpg" alt="Drop Sensor Wiper System Car" class="project-img" />
+            <span class="project-badge-top">Automotive IoT System</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Drop Sensor Smart Wiper Car System</h3>
+            <p class="project-description">
+              Engineered an automated wiper system for vehicles utilizing sensitive moisture detection drop sensors. Employs embedded control logic to automatically calibrate wiper sweep frequencies proportional to rainfall intensity.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">Embedded C</span>
+              <span class="tech-chip">Rain Drop Sensor</span>
+              <span class="tech-chip">Servo Control</span>
+              <span class="tech-chip">Microcontroller</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">🌧️ Live Wiper Sim</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="wiper-car">Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Data Analytics & SQL Insights -->
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="assets/images/data_analytics.jpg" alt="Data Analytics Suite" class="project-img" />
+            <span class="project-badge-top">Data Analytics • Python & Power BI</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Data Analytics & SQL Insights Suite</h3>
+            <p class="project-description">
+              Comprehensive analytics toolkit combining Python data wrangling (Pandas, NumPy), complex SQL queries, and interactive Power BI dashboards to track business metrics, operational trends, and key performance indicators.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">SQL</span>
+              <span class="tech-chip">Power BI</span>
+              <span class="tech-chip">Pandas</span>
+            </div>
+            <div class="project-actions">
+              <a href="#playground" class="btn btn-primary btn-sm">📊 Run SQL Query Demo</a>
+              <button class="btn btn-secondary btn-sm btn-view-details" data-project="data-analytics">Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Playground & Simulators Section -->
+  <section id="playground" class="simulators-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">🎮 Live Interactive Hub</span>
+        <h2 class="section-title">Interactive <span class="gradient-text">Playground</span></h2>
+        <p class="section-subtitle">Experience live simulations of Amit's IoT hardware controller, AI interview engine with voice readout, automotive smart wiper simulator, SQL sandbox, and hacker CLI terminal.</p>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="sim-tab-nav">
+        <button class="sim-tab-btn active" data-tab="tab-safesphere">🛡️ SafeSphere Radar</button>
+        <button class="sim-tab-btn" data-tab="tab-resume">📄 AI Resume Maker</button>
+        <button class="sim-tab-btn" data-tab="tab-iot">🏠 IoT Smart Home</button>
+        <button class="sim-tab-btn" data-tab="tab-ai">🤖 AI Interview Demo</button>
+        <button class="sim-tab-btn" data-tab="tab-wiper">🌧️ Smart Wiper Sim</button>
+        <button class="sim-tab-btn" data-tab="tab-analytics">📈 Live Data Charts</button>
+        <button class="sim-tab-btn" data-tab="tab-sql">📊 SQL Query Engine</button>
+        <button class="sim-tab-btn" data-tab="tab-terminal">💻 Hacker CLI Terminal</button>
+      </div>
+
+      <!-- Tab 0A: SafeSphere Threat Radar Simulator (NEW) -->
+      <div id="tab-safesphere" class="sim-tab-content active">
+        <div class="sim-container">
+          <div class="iot-header">
+            <div>
+              <h3 style="font-size: 1.3rem;">SafeSphere — Live Security & Threat Radar</h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Simulated authenticated telemetry stream, threat logging & instant alert dispatch</p>
+            </div>
+            <div style="display:flex; gap:10px; align-items:center;">
+              <button id="btn-trigger-threat" class="btn btn-primary btn-sm">⚡ Trigger Threat Event</button>
+              <div class="iot-status-badge">
+                <span class="status-dot"></span>
+                <span>Socket: AES-256 Connected</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; align-items:center;">
+            <span style="font-size:0.82rem; color:var(--text-muted);">Severity Filter:</span>
+            <button class="sql-chip-btn threat-filter-btn active" data-threat-filter="all">All Alerts</button>
+            <button class="sql-chip-btn threat-filter-btn" data-threat-filter="critical">Critical</button>
+            <button class="sql-chip-btn threat-filter-btn" data-threat-filter="high">High</button>
+            <button class="sql-chip-btn threat-filter-btn" data-threat-filter="normal">Normal</button>
+          </div>
+
+          <div class="safesphere-grid">
+            <!-- Alert Feed Panel -->
+            <div class="threat-monitor-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size:0.95rem;">Real-Time Threat Alert Log</strong>
+                <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-secondary);">LIVE STREAM</span>
+              </div>
+              <div class="threat-alert-feed" id="threat-alert-feed">
+                <div class="threat-item critical" data-severity="critical">
+                  <div class="threat-meta">
+                    <div class="threat-type">Perimeter Breach Detected <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">• Sector 7A</span></div>
+                    <div class="threat-time">⏰ 15:42:10 — Motion tripwire anomaly flagged by smart sensor node.</div>
+                  </div>
+                  <span class="threat-badge critical">Critical</span>
+                </div>
+                <div class="threat-item high" data-severity="high">
+                  <div class="threat-meta">
+                    <div class="threat-type">Thermal Anomaly Spike <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">• Unit 3B Server</span></div>
+                    <div class="threat-time">⏰ 15:39:45 — DHT11 temperature threshold exceeded (42°C).</div>
+                  </div>
+                  <span class="threat-badge high">High</span>
+                </div>
+                <div class="threat-item normal" data-severity="normal">
+                  <div class="threat-meta">
+                    <div class="threat-type">Encrypted Telemetry Synced <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">• All Nodes</span></div>
+                    <div class="threat-time">⏰ 15:35:00 — Zero packet loss across 14 remote IoT gateway nodes.</div>
+                  </div>
+                  <span class="threat-badge normal">Normal</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diagnostics & HUD Panel -->
+            <div class="threat-monitor-card" style="justify-content:space-between;">
+              <div>
+                <strong style="font-size:0.95rem; display:block; margin-bottom:14px;">System Health & Gateway Status</strong>
+                <div class="iot-gauges" style="margin-bottom:16px;">
+                  <div class="gauge-card">
+                    <div class="gauge-label">System Health</div>
+                    <div class="gauge-val" style="color:#34d399;">98.8%</div>
+                    <div style="font-size: 0.75rem; color: #34d399;">● Full Operational</div>
+                  </div>
+                  <div class="gauge-card">
+                    <div class="gauge-label">API Latency</div>
+                    <div class="gauge-val" style="color:#38bdf8;">14 ms</div>
+                    <div style="font-size: 0.75rem; color: #38bdf8;">● REST Endpoint Fast</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:rgba(13,18,32,0.9); border:1px solid var(--border-glass); border-radius:var(--radius-sm); padding:14px; font-size:0.85rem; display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="color:var(--text-muted);">Active Monitoring Nodes:</span>
+                  <span style="font-family:var(--font-mono); color:#fff; font-weight:700;">14 / 14 Online</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="color:var(--text-muted);">Encryption Protocol:</span>
+                  <span style="font-family:var(--font-mono); color:#38bdf8; font-weight:700;">AES-256 (TLS 1.3)</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="color:var(--text-muted);">Automated Threat Mitigation:</span>
+                  <span style="font-family:var(--font-mono); color:#34d399; font-weight:700;">ENABLED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 0B: AI Resume Maker Simulator (NEW) -->
+      <div id="tab-resume" class="sim-tab-content">
+        <div class="sim-container">
+          <div class="iot-header">
+            <div>
+              <h3 style="font-size: 1.3rem;">AI Resume Maker — ATS Tailoring Sandbox</h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Test dynamic prompt workflows, instant keyword alignment, and ATS compatibility scoring</p>
+            </div>
+            <div class="iot-status-badge">
+              <span class="status-dot"></span>
+              <span>ATS Engine: v3.2 Active</span>
+            </div>
+          </div>
+
+          <div class="resume-sim-grid">
+            <!-- Left: Inputs -->
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div class="form-group">
+                <label class="form-label">Select Target Domain Track:</label>
+                <select id="resume-role-select" class="form-input" style="cursor:pointer;">
+                  <option value="data">Data Analytics & Business Intelligence</option>
+                  <option value="web">Frontend & React Web Engineering</option>
+                  <option value="iot">Embedded Systems & Hardware IoT</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Add Specific Job Keywords / Target Company:</label>
+                <input type="text" id="resume-keywords-input" class="form-input" placeholder="e.g. Pandas, Power BI, SQL Optimization, React, Fast APIs" />
+              </div>
+
+              <button id="btn-generate-resume" class="btn btn-primary" style="align-self:flex-start;">
+                <span>✨ Generate Tailored Resume Summary</span>
+              </button>
+            </div>
+
+            <!-- Right: Live ATS Preview -->
+            <div class="resume-preview-box">
+              <div class="ats-score-meter">
+                <div class="ats-score-circle" id="ats-score-num">98%</div>
+                <div>
+                  <strong style="display:block; font-size:0.95rem; color:#34d399;">ATS Compatibility Score: EXCELLENT</strong>
+                  <span style="font-size:0.8rem; color:var(--text-muted);">High keyword density aligned with industry recruiters</span>
+                </div>
+              </div>
+
+              <div>
+                <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Optimized Profile Summary:</span>
+                <p id="resume-output-text" style="font-size:0.9rem; line-height:1.6; color:var(--text-secondary); margin-top:6px;">
+                  B.Tech CSE undergraduate (Vision Institute of Technology, AKTU, Class of 2027) with deep expertise in Data Analytics, automated Python pipelines (Pandas, NumPy), and relational SQL databases. Experienced in building executive Power BI reporting dashboards, translating unstructured datasets into actionable business intelligence, and executing ML data preparation certified by IIT Mandi & iHub HCI Foundation.
+                </p>
+              </div>
+
+              <div>
+                <span style="font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:6px;">Matched ATS Keywords:</span>
+                <div id="ats-keywords-list" style="display:flex; flex-wrap:wrap; gap:6px;">
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ Python</span>
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ SQL</span>
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ Power BI</span>
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ Pandas</span>
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ NumPy</span>
+                  <span class="tech-chip" style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#34d399; border-color:rgba(16,185,129,0.3);">✓ Data Annotation</span>
+                </div>
+              </div>
+
+              <button id="btn-copy-resume" class="btn btn-secondary btn-sm" style="align-self:flex-start; margin-top:6px;">
+                <span>📋 Copy Tailored Summary</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 1: IoT Smart Home Simulator -->
+      <div id="tab-iot" class="sim-tab-content">
+        <div class="sim-container">
+          <div class="iot-header">
+            <div>
+              <h3 style="font-size: 1.3rem;">ESP8266 IoT Hardware Control Panel</h3>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">Simulated live relay commands & DHT11 telemetry stream</p>
+            </div>
+            <div class="iot-status-badge">
+              <span class="status-dot"></span>
+              <span id="iot-dht-status">DHT11: Connected (Live Stream)</span>
+            </div>
+          </div>
+
+          <div class="iot-grid">
+            <!-- Sensor Telemetry Gauges -->
+            <div class="iot-gauges">
+              <div class="gauge-card">
+                <div class="gauge-label">DHT11 Temperature</div>
+                <div class="gauge-val" id="iot-temp-val">26.4°C</div>
+                <div style="font-size: 0.78rem; color: #34d399;">● Real-time Fluctuation</div>
+              </div>
+              <div class="gauge-card">
+                <div class="gauge-label">DHT11 Humidity</div>
+                <div class="gauge-val" id="iot-hum-val">58%</div>
+                <div style="font-size: 0.78rem; color: #38bdf8;">● Moisture Optimal</div>
+              </div>
+            </div>
+
+            <!-- Smart Relay Switches -->
+            <div class="iot-switches-grid">
+              <!-- Switch 1 -->
+              <div class="switch-card on">
+                <div class="switch-info">
+                  <span class="switch-icon">💡</span>
+                  <div>
+                    <strong class="switch-title">Living Room Light</strong>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Relay 1 (GPIO 4)</div>
+                  </div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" class="iot-toggle-input" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Switch 2 -->
+              <div class="switch-card">
+                <div class="switch-info">
+                  <span class="switch-icon">❄️</span>
+                  <div>
+                    <strong class="switch-title">Smart Air Conditioner</strong>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Relay 2 (GPIO 5)</div>
+                  </div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" class="iot-toggle-input">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Switch 3 -->
+              <div class="switch-card on">
+                <div class="switch-info">
+                  <span class="switch-icon">🌀</span>
+                  <div>
+                    <strong class="switch-title">Ceiling Fan (Speed 3)</strong>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">PWM Pin 12</div>
+                  </div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" class="iot-toggle-input" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Switch 4 -->
+              <div class="switch-card">
+                <div class="switch-info">
+                  <span class="switch-icon">🔒</span>
+                  <div>
+                    <strong class="switch-title">Security Perimeter</strong>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Sensor Pin 14</div>
+                  </div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" class="iot-toggle-input">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: AI Mock Interview Simulator -->
+      <div id="tab-ai" class="sim-tab-content">
+        <div class="sim-container">
+          <div class="ai-interview-layout">
+            
+            <!-- Left: Question & Input -->
+            <div class="interview-control-panel">
+              <div>
+                <label class="form-label" style="margin-bottom: 8px; display:block;">Select Interview Domain Track:</label>
+                <div class="role-selector-btns">
+                  <button class="role-btn active" data-role="data">Data Analytics</button>
+                  <button class="role-btn" data-role="web">Frontend / Web</button>
+                  <button class="role-btn" data-role="iot">IoT & Embedded</button>
+                </div>
+              </div>
+
+              <div class="question-box">
+                <div class="question-badge" id="interview-q-badge">Question 1 of 3 (DATA ANALYTICS)</div>
+                <div class="question-text" id="interview-q-text">
+                  What is the difference between WHERE and HAVING in SQL, and when would you use Pandas .groupby() over SQL?
+                </div>
+              </div>
+
+              <div class="waveform-box">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <button id="btn-speak-question" class="btn-speak-voice" title="Listen to question via Text-to-Speech">
+                  <span>🔊 Read Question Aloud</span>
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Type Your Simulated Answer / Technical Response:</label>
+                <textarea id="interview-answer-input" class="form-textarea" placeholder="e.g., WHERE filters individual rows before aggregation, while HAVING filters grouped rows after aggregate functions like SUM/COUNT..."></textarea>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button id="btn-submit-answer" class="btn btn-primary">Submit for AI Evaluation</button>
+                <button id="btn-next-question" class="btn btn-secondary">Next Question →</button>
+              </div>
+            </div>
+
+            <!-- Right: AI Evaluation Output -->
+            <div class="interview-output-panel">
+              <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Real-Time AI Feedback Engine</h4>
+              
+              <div class="score-badge-circle">
+                <div class="score-num" id="interview-score">94%</div>
+                <div class="score-lbl">Score</div>
+              </div>
+
+              <div id="interview-feedback-text" style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+                <strong>AI Evaluation Ready:</strong> Type your answer in the box on the left and click <em>"Submit for AI Evaluation"</em> to see real-time NLP metric assessment, technical accuracy, and key improvement recommendations.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Smart Wiper Simulator -->
+      <div id="tab-wiper" class="sim-tab-content">
+        <div class="sim-container">
+          <div class="wiper-sim-layout">
+            
+            <!-- Wiper Controls -->
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <div>
+                <h3 style="font-size: 1.3rem;">Drop Sensor Smart Wiper Simulator</h3>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">Adjust rainfall intensity slider to test real-time servo sweep responses.</p>
+              </div>
+
+              <div class="form-group">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <label class="form-label">Rainfall Moisture Intensity:</label>
+                  <span id="rain-intensity-val" style="font-family:var(--font-mono); color:var(--accent-secondary); font-weight:700;">45%</span>
+                </div>
+                <input type="range" id="rain-intensity-slider" min="0" max="100" value="45" style="width:100%; accent-color:var(--accent-primary); cursor:pointer;">
+              </div>
+
+              <div style="background: rgba(13, 18, 31, 0.8); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 16px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Microcontroller Status:</span>
+                  <span id="wiper-status-val" style="font-family:var(--font-mono); color:#34d399; font-weight:700;">MODERATE RAINFALL</span>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Servo Sweep Speed:</span>
+                  <span id="wiper-speed-val" style="font-family:var(--font-mono); color:#38bdf8; font-weight:700;">65 RPM (MEDIUM)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Windshield Animated Canvas -->
+            <div class="windshield-canvas-box">
+              <canvas id="windshield-canvas"></canvas>
+              <div class="wiper-telemetry-hud">
+                <div>● SENSOR: ACTIVE</div>
+                <div>● EMBEDDED C PWM: ON</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Live Data Analytics Charts -->
+      <div id="tab-analytics" class="sim-tab-content">
+        <div class="sim-container">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+            <div>
+              <h3 style="font-size: 1.3rem;">Interactive Analytics & KPI Dashboard</h3>
+              <p style="color: var(--text-secondary); font-size: 0.88rem;">Real-time metrics rendered via dynamic data engine</p>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="sql-chip-btn chart-toggle-btn active" data-chart="revenue">Revenue Trends</button>
+              <button class="sql-chip-btn chart-toggle-btn" data-chart="iot_nodes">IoT Nodes</button>
+              <button class="sql-chip-btn chart-toggle-btn" data-chart="user_growth">User Growth</button>
+            </div>
+          </div>
+
+          <div class="analytics-chart-box">
+            <div class="chart-bar-col">
+              <div class="chart-bar-val">$1.4M</div>
+              <div class="chart-bar-fill" style="height: 78%;"></div>
+              <div class="chart-bar-lbl">Q1</div>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar-val">$2.1M</div>
+              <div class="chart-bar-fill" style="height: 88%;"></div>
+              <div class="chart-bar-lbl">Q2</div>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar-val">$2.8M</div>
+              <div class="chart-bar-fill" style="height: 95%;"></div>
+              <div class="chart-bar-lbl">Q3</div>
+            </div>
+            <div class="chart-bar-col">
+              <div class="chart-bar-val">$3.4M</div>
+              <div class="chart-bar-fill" style="height: 100%;"></div>
+              <div class="chart-bar-lbl">Q4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 5: SQL Playground -->
+      <div id="tab-sql" class="sim-tab-content">
+        <div class="sim-container">
+          <div class="sql-playground-layout">
+            <div style="display: flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+              <div>
+                <h3 style="font-size: 1.3rem;">Interactive SQL Sandbox</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Execute live queries against mock databases (Students, IoT Telemetry, Sales Analytics)</p>
+              </div>
+              <button id="btn-run-sql" class="btn btn-primary btn-sm">▶ Execute Query</button>
+            </div>
+
+            <div class="sql-preset-chips">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Quick Presets:</span>
+              <button class="sql-chip-btn" data-query="SELECT * FROM students WHERE gpa > 8.5;">SELECT Top Students</button>
+              <button class="sql-chip-btn" data-query="SELECT * FROM iot_telemetry;">SELECT IoT Devices</button>
+              <button class="sql-chip-btn" data-query="SELECT region, SUM(revenue_inr) AS total_revenue FROM sales_analytics GROUP BY region;">SELECT Sales Analytics</button>
+            </div>
+
+            <div class="sql-editor-box">
+              <textarea id="sql-query-input" class="sql-textarea">SELECT * FROM students WHERE gpa > 8.5;</textarea>
+            </div>
+
+            <div id="sql-meta-info" style="font-family: var(--font-mono); font-size: 0.82rem; color: #34d399;">
+              ✓ Query executed: Ready
+            </div>
+
+            <div class="sql-result-wrap" id="sql-table-output">
+              <!-- Rendered Table -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 6: Terminal CLI -->
+      <div id="tab-terminal" class="sim-tab-content">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot-ctrl dot-red"></span>
+              <span class="terminal-dot-ctrl dot-yellow"></span>
+              <span class="terminal-dot-ctrl dot-green"></span>
+            </div>
+            <div class="terminal-title-text">amit@portfolio-os: ~/portfolio (zsh)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Type <strong>help</strong> for commands</div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output">
+              <div class="terminal-line success">Welcome to Amit Kumar's Interactive Shell v2.4 (x86_64-portfolio)</div>
+              <div class="terminal-line info">Type <span style="color:#38bdf8; font-weight:700;">help</span> to inspect available developer commands, or type <span style="color:#38bdf8; font-weight:700;">skills</span>, <span style="color:#38bdf8; font-weight:700;">projects</span>, <span style="color:#38bdf8; font-weight:700;">resume</span>.</div>
+            </div>
+            <div class="terminal-prompt-row">
+              <span class="terminal-prompt-lbl">amit@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" autofocus placeholder="type command here..." />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Achievements, Hackathons & Certifications -->
+  <section id="achievements" class="achievements-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">🏆 Recognitions & Honors</span>
+        <h2 class="section-title">Achievements & <span class="gradient-text">Hackathons</span></h2>
+        <p class="section-subtitle">Verified awards, national hackathon podium finishes, and academic certifications.</p>
+      </div>
+
+      <div class="achievements-grid">
+        
+        <!-- HackGear 2.0 -->
+        <div class="award-card">
+          <div class="award-badge-top">🥉</div>
+          <div class="award-icon-wrap">🏆</div>
+          <h3 class="award-title">3rd Position — HackGear 2.0</h3>
+          <div class="award-org">Team Quantum Coders | National Hackathon</div>
+          <p class="award-desc">
+            Secured 3rd place with an Appreciation Certificate in HackGear 2.0 after developing an innovative tech solution evaluated by industry judges.
+          </p>
+        </div>
+
+        <!-- District Level Certificate -->
+        <div class="award-card">
+          <div class="award-badge-top">🎖️</div>
+          <div class="award-icon-wrap">📜</div>
+          <h3 class="award-title">District-Level Project Certificate</h3>
+          <div class="award-org">Atal Tinkering Lab (ATL Lab) Submission</div>
+          <p class="award-desc">
+            Awarded a District-Level Certificate recognizing the Smart Home Automation System for practical engineering and outstanding hardware execution.
+          </p>
+        </div>
+
+        <!-- IIT Mandi Certification -->
+        <div class="award-card">
+          <div class="award-badge-top">🎓</div>
+          <div class="award-icon-wrap">⚡</div>
+          <h3 class="award-title">Certified Data Annotator</h3>
+          <div class="award-org">IIT Mandi & iHub HCI Foundation</div>
+          <p class="award-desc">
+            Completed comprehensive certification course covering data annotation pipelines, dataset quality inspection, and machine learning preparation workflows.
+          </p>
+        </div>
+
+        <!-- HackGear 1.0 -->
+        <div class="award-card">
+          <div class="award-badge-top">🌟</div>
+          <div class="award-icon-wrap">🤝</div>
+          <h3 class="award-title">HackGear 1.0 Hackathon</h3>
+          <div class="award-org">National-Level Participation & Coordination</div>
+          <p class="award-desc">
+            Earned national participation and event coordination certificates, leading team collaboration and technical challenge problem-solving.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Hire Me Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">📬 Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have a project, internship, or data analytics opportunity? Let's talk!</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Contact Details -->
+        <div class="contact-info-card">
+          <div>
+            <h3>Let's Collaborate</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+              I am actively seeking internships, project collaborations, and full-time opportunities in <strong>Data Analytics</strong>, <strong>Software Development</strong>, and <strong>IoT Engineering</strong>.
+            </p>
+          </div>
+
+          <div class="contact-channel-list">
+            <!-- Email -->
+            <a href="mailto:amitk55575@gmail.com" class="contact-channel-item">
+              <div class="channel-icon">✉️</div>
+              <div>
+                <div class="channel-title">Email Directly</div>
+                <div class="channel-val">amitk55575@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+917817034503" class="contact-channel-item">
+              <div class="channel-icon">📞</div>
+              <div>
+                <div class="channel-title">Phone / WhatsApp</div>
+                <div class="channel-val">+91 7817034503</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/amit-kumar-479211332" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="channel-icon">💼</div>
+              <div>
+                <div class="channel-title">LinkedIn Network</div>
+                <div class="channel-val">linkedin.com/in/amit-kumar-479211332</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Amitydv2007" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+              <div class="channel-icon">🐙</div>
+              <div>
+                <div class="channel-title">GitHub Profile</div>
+                <div class="channel-val">github.com/Amitydv2007</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-card">
+          <form id="portfolio-contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Your Email *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="e.g. Internship Opportunity / Project Inquiry" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Hello Amit, I reviewed your portfolio and would like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <span>🚀 Send Message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="project-modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="modal-project-badge" class="section-tag" style="margin-bottom: 12px;"></div>
+      <h3 id="modal-project-title" style="font-size: 1.6rem; margin-bottom: 14px;"></h3>
+      <p id="modal-project-desc" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; font-size: 1rem;"></p>
+      
+      <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; letter-spacing: 0.5px;">Technologies Used:</h4>
+      <div id="modal-project-tech" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;"></div>
+
+      <div style="display: flex; gap: 12px;">
+        <a href="https://github.com/Amitydv2007" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">GitHub Repository</a>
+        <a href="#playground" class="btn btn-secondary btn-sm" onclick="document.getElementById('project-modal-overlay').classList.remove('active');">Try Interactive Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clean Footer (Signature Removed) -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-credits">
+        <p>© 2026 <strong>Amit Kumar</strong>. All Rights Reserved.</p>
+        <p style="font-size: 0.82rem; margin-top: 4px; color: var(--text-muted);">Vision Institute of Technology | Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+      </div>
+
+      <a href="#hero" class="back-to-top-btn">
+        <span>↑ Back to Top</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/simulators.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>

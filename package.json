@@ -1,0 +1,28 @@
+{
+  "name": "amit-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Personal developer portfolio of Amit Kumar - Computer Science Engineer, Data Analytics & IoT Developer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "data-analytics",
+    "python",
+    "sql",
+    "iot",
+    "javascript",
+    "react",
+    "esp8266",
+    "arduino",
+    "web-development",
+    "amit-kumar"
+  ],
+  "author": "Amit Kumar <amitk55575@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Amitydv2007"
+}
